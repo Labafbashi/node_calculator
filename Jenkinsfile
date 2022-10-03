@@ -4,6 +4,7 @@ pipeline {
         stage('PreBuild') {
           steps{
             echo 'Pre Build'
+            sh "ls -la ${pwd()}"
           }
         }
         stage('Test') {
