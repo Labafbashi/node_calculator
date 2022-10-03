@@ -4,8 +4,7 @@ pipeline {
       ansicolor('xterm'){
         stage "\u001B[31mI'm Red\u001B[0m Now not"
       }
-    }
-    stages {
+      stages {
         stage('PreBuild') {
           steps{
             echo 'Pre Build'
@@ -27,4 +26,5 @@ pipeline {
           }
         }
     }
+  }
 }
