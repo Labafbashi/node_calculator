@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters {
+      string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+    }
       stages {
         stage('PreBuild') {
           steps{
@@ -9,7 +12,7 @@ pipeline {
         }
         stage('Test') {
           steps{
-            echo 'Test'
+            echo 'Test ${params.Greeting} World!!!'
           }
         }
         stage('Build') {
