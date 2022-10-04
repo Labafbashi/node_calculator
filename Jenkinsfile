@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Test') {
           steps{
-            echo 'Test ${params.Greeting} World!!!'
+            echo "${params.Greeting} World!!!"
           }
         }
         stage('Build') {
